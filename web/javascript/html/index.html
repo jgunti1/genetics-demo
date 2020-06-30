@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Translation | Genetics Demo | Bio::Neos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/50991727cc.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+      <img src="/img/favicon.ico" alt="Logo" id="nav-logo">
+      Genetics Demo
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">DNA Translation <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sequence-alignment">Sequence Alignment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/bioneos/genetics-demo/tree/devel/web/javascript" target="_blank">Project Repository</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="body-container">
+    <form>
+      <div class="form-group">
+        <label for="dna-file-input">Upload a FASTA (<span class="monospaced">.fasta</span>, <span class="monospaced">.fas</span>, <span class="monospaced">.fa</span>) or plain text (<span class="monospaced">.txt</span>) file with a DNA string</label>
+        <input type="file" accept=".txt,.fasta,.fas,.fa" class="form-control-file" id="dna-file-input">
+      </div>
+      <div class="form-group">
+        <label for="dna-input">DNA</label>
+        <i class="fas fa-copy" id="copy-dna"></i>
+        <i class="fas fa-file-download" id="download-dna"></i>
+        <i class="fas fa-times" id="clear-dna"></i>
+        <i class="fas fa-arrow-right" id="open-dna"></i>
+        <textarea class="form-control monospaced" id="dna-input" placeholder="DNA" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mrna-input">mRNA</label>
+        <i class="fas fa-copy" id="copy-mrna"></i>
+        <i class="fas fa-file-download" id="download-mrna"></i>
+        <textarea class="form-control monospaced" id="mrna-input" placeholder="mRNA" readonly rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="protein-input">Proteins</label>
+        <i class="fas fa-copy" id="copy-proteins"></i>
+        <i class="fas fa-file-download" id="download-proteins"></i>
+        <i class="fas fa-times" id="clear-proteins"></i>
+        <textarea class="form-control monospaced" id="protein-input" placeholder="Proteins" rows="4"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary algorithm-button" id="dna-to-proteins-button">DNA to Protein Sequence</button>
+      <button type="button" class="btn btn-primary algorithm-button" id="proteins-to-dna-button">Protein Sequence to DNA</button>
+    </form>
+
+    <div class="alert alert-danger d-none" role="alert" id="dna-translation-alert"></div>
+    <div class="spinner-border text-primary d-none" role="status" id="dna-translation-loader">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

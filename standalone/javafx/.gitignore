@@ -1,0 +1,6 @@
+*.iml
+.idea/
+src/out/
+.out/
+src/TranslatorGUIController_bad.java
+src/TranslatorGUIController.java

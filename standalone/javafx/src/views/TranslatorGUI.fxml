@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TranslatorGUIController">
+   <children>
+      <TextArea fx:id="dnaTextArea" layoutX="46.0" layoutY="55.0" prefHeight="65.0" prefWidth="508.0" />
+      <Label fx:id="dnaLabel" layoutX="15.0" layoutY="39.0" text="DNA" />
+      <Label fx:id="rnaLabel" layoutX="16.0" layoutY="127.0" text="RNA" />
+      <Label fx:id="proteinLabel" layoutX="20.0" layoutY="223.0" text="Protein" />
+      <Button fx:id="convertButton" layoutX="224.0" layoutY="318.0" mnemonicParsing="false" onAction="#convertButtonPress" text="Transcribe/Translate" />
+      <Button fx:id="resetButton" layoutX="265.0" layoutY="354.0" mnemonicParsing="false" onAction="#resetButtonPress" text="Reset" />
+      <Button fx:id="nextPage" layoutX="557.0" layoutY="8.0" mnemonicParsing="false" onAction="#nextPageButtonPress" prefHeight="36.0" prefWidth="36.0" text="-&gt;" />
+      <Label layoutX="431.0" layoutY="20.0" text="Protein Alignment" />
+      <Button fx:id="uploadFastaButton" layoutX="241.0" layoutY="388.0" mnemonicParsing="false" onAction="#uploadFastaButtonPress" text="Upload FASTA" />
+      <TextFlow fx:id="rnaTextFlow" layoutX="46.0" layoutY="135.0" prefHeight="78.0" prefWidth="508.0" />
+      <TextFlow fx:id="proteinTextFlow" layoutX="46.0" layoutY="238.0" prefHeight="65.0" prefWidth="508.0" />
+   </children>
+</AnchorPane>

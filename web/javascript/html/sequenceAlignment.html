@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sequence Alignment | Genetics Demo | Bio::Neos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/50991727cc.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+      <img src="/img/favicon.ico" alt="Logo" id="nav-logo">
+      Genetics Demo
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">DNA Translation</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/sequence-alignment">Sequence Alignment <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/bioneos/genetics-demo/tree/devel/web/javascript" target="_blank">Project Repository</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="body-container">
+    <form>
+      <div class="form-group">
+        <label for="dna-file-input-1">Upload a FASTA (<span class="monospaced">.fasta</span>, <span class="monospaced">.fas</span>, <span class="monospaced">.fa</span>) or plain text (<span class="monospaced">.txt</span>) file with a DNA string</label>
+        <input type="file" accept=".txt,.fasta,.fas,.fa" class="form-control-file" id="dna-file-input-1">
+      </div>
+      <div class="form-group">
+        <label for="dna-input-1">DNA String 1</label>
+        <i class="fas fa-copy" id="copy-dna-1"></i>
+        <i class="fas fa-file-download" id="download-dna-1"></i>
+        <i class="fas fa-times" id="clear-dna-1"></i>
+        <i class="fas fa-arrow-right" id="open-dna-1"></i>
+        <textarea class="form-control monospaced" id="dna-input-1" placeholder="DNA" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dna-file-input-2">Upload a FASTA (<span class="monospaced">.fasta</span>, <span class="monospaced">.fas</span>, <span class="monospaced">.fa</span>) or plain text (<span class="monospaced">.txt</span>) file with a DNA string</label>
+        <input type="file" accept=".txt,.fasta,.fas,.fa" class="form-control-file" id="dna-file-input-2">
+      </div>
+      <div class="form-group">
+        <label for="dna-input-2">DNA String 2</label>
+        <i class="fas fa-copy" id="copy-dna-2"></i>
+        <i class="fas fa-file-download" id="download-dna-2"></i>
+        <i class="fas fa-times" id="clear-dna-2"></i>
+        <i class="fas fa-arrow-right" id="open-dna-2"></i>
+        <textarea class="form-control monospaced" id="dna-input-2" placeholder="DNA" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="needleman-wunsch-alignments">Needleman Wunsch Alignment</label>
+        <i class="fas fa-copy" id="copy-alignments"></i>
+        <i class="fas fa-file-download" id="download-alignments"></i>
+        <textarea class="form-control monospaced" id="needleman-wunsch-alignments" placeholder="Best Sequence Alignment" readonly rows="4"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary algorithm-button" id="edit-distance-button">Calculate Edit Distance</button>
+      <button type="button" class="btn btn-primary algorithm-button" id="needleman-wunsch-button">Calculate Needleman Wunsch</button>
+    </form>
+
+    <div class="alert alert-info d-none" role="alert" id="sequence-alignment-alert"></div>
+    <div class="spinner-border text-primary d-none" role="status" id="sequence-alignment-loader">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

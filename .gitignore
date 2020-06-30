@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# Temporary/swap files
+.*.swo
+*~
+.*.swp
+
+# JetBrains IDEs
+# Only exlcude the .idea folder in the repository root
+# In each project subdirectory, some parts of the .idea folder should be included
+/.idea/

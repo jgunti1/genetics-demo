@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProteinAlignerGUIController">
+   <children>
+      <Button fx:id="prevPage" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#prevPageButtonPress" prefHeight="36.0" prefWidth="36.0" text="&lt;-" />
+      <ScrollPane layoutX="12.0" layoutY="263.0" prefHeight="88.0" prefWidth="577.0">
+         <content>
+            <TextArea fx:id="alignmentArea" editable="false" prefHeight="69.0" prefWidth="2131.0">
+               <font>
+                  <Font name="Unifont" size="18.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="sequenceOne" layoutX="98.0" layoutY="69.0" prefHeight="25.0" prefWidth="494.0">
+         <font>
+            <Font name="Unifont" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="sequenceTwo" layoutX="98.0" layoutY="121.0" prefHeight="25.0" prefWidth="494.0">
+         <font>
+            <Font name="Unifont" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="12.0" layoutY="74.0" text="Sequence 1" />
+      <Label layoutX="12.0" layoutY="126.0" text="Sequence 2" />
+      <Label layoutX="267.0" layoutY="240.0" text="Alignment" />
+      <Button fx:id="alignSequences" layoutX="238.0" layoutY="161.0" mnemonicParsing="false" onAction="#alignSequencesButtonPress" text="Align Sequences" />
+   </children>
+</AnchorPane>

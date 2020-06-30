@@ -1,0 +1,30 @@
+{
+  "name": "genetics-demo-javascript",
+  "version": "2.0.0",
+  "description": "The creation of this project was part of the Bio::Neos training plan -- module 1.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bioneos/genetics-demo-javascript.git"
+  },
+  "author": "Bio::Neos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bioneos/genetics-demo-javascript/issues"
+  },
+  "homepage": "https://github.com/bioneos/genetics-demo-javascript#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "seqalign": "^1.0.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.4"
+  }
+}

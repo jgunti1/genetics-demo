@@ -1,0 +1,32 @@
+#nav-logo
+{
+  margin-right: 8px;
+  height: 25px;
+}
+
+.body-container
+{
+  margin: 16px;
+}
+
+.monospaced
+{
+  font-family: monospace;
+  font-size: 16px;
+}
+
+i
+{
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.algorithm-button
+{
+  margin-bottom: 16px;
+}
+
+#needleman-wunsch-alignments
+{
+  white-space: pre;
+}
